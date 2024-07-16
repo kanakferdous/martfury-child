@@ -18,4 +18,4 @@ jobs:
         username: ${{ secrets.FTPUSERNAME }}
         password: ${{ secrets.FTPPASSWORD }}
         protocol: ftp
-        server-dir: public_html/wp-content/themes/martfury-child
+        server-dir: public_html/wp-content/themes/martfury-child/
