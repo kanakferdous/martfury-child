@@ -131,7 +131,7 @@ Template: martfury
     height: 40px !important;
 }
 .woocommerce ul.products li.product .mf-product-thumbnail .footer-button {
-    padding: 0px !important;
+    padding: 20px !important;
     background-color: transparent !important;
 }
 .woocommerce ul.products li.product .mf-product-thumbnail .yith-wcwl-add-to-wishlist {
@@ -172,7 +172,6 @@ Template: martfury
     color: #fff !important;
 }
 .woocommerce ul.products li.product .product-inner:hover .mf-product-thumbnail .footer-button {
-    bottom: 50% !important;
     transform: translate(0px, 50%);
 }
 .site-footer .footer-newsletter .newsletter-form .mc4wp-form-fields input[type="submit"] {
@@ -525,4 +524,33 @@ company_logo_slider .elementor-swiper-button-prev {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+/* Martfury Addons CSS */
+.woocommerce.mf-product-recently-viewed ul.products li.product .product-inner {
+    padding: 5px;
+    border: 1px solid #DEE2E7 !important;
+    margin-bottom: 0;
+    min-height: 305px;
+}
+
+.woocommerce.mf-product-recently-viewed ul.products li.product .product-inner .mf-rating {
+    display: none;
+}
+
+.woocommerce.mf-product-recently-viewed ul.products li.product h2 {
+    height: inherit;
+    color: #3A3A3C;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 30px;
+}
+
+.woocommerce.mf-product-recently-viewed ul.products li.product {
+    margin-bottom: 0;
 }

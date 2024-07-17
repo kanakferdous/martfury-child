@@ -9,13 +9,13 @@ function martfury_child_enqueue_scripts() {
 }
 
 // always display rating stars
-function filter_woocommerce_product_get_rating_html( $rating_html, $rating ) { 
+function filter_woocommerce_product_get_rating_html( $rating_html, $rating ) {
     $rating_html  = '<div class="star-rating">';
     $rating_html .= wc_get_star_rating_html( $rating );
     $rating_html .= '</div>';
 
-    return $rating_html; 
-};  
+    return $rating_html;
+};
 add_filter( 'woocommerce_product_get_rating_html', 'filter_woocommerce_product_get_rating_html', 10, 3 );
 
 // For Woocommerce version 3 and above only
@@ -114,7 +114,7 @@ function google_footer_script(){
   </script>
   <?php
 }
-  
+
 add_action( 'woocommerce_register_form_start', 'woocom_extra_register_fields' );
 function woocom_extra_register_fields() {?>
 
@@ -141,7 +141,7 @@ function custom_woocommerce_product_add_to_cart_text() {
   $product_type = $product->product_type;
   foreach( WC()->cart->get_cart() as $cart_item_key => $values ) {
 		$_product = $values['data'];
-	
+
 		if( get_the_ID() == $_product->id ) {
 			return __('Already in cart', 'woocommerce');
 		}
@@ -171,15 +171,15 @@ function custom_woocommerce_product_add_to_cart_text() {
 add_filter('woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text');
 
 function woo_custom_cart_button_text() {
-	
+
 	foreach( WC()->cart->get_cart() as $cart_item_key => $values ) {
 		$_product = $values['data'];
-	
+
 		if( get_the_ID() == $_product->id ) {
 			return __('Already in cart - Add Again?', 'woocommerce');
 		}
 	}
-	
+
 	return __('Add to cart', 'woocommerce');
 }
 
@@ -189,14 +189,14 @@ function woo_custom_cart_button_text() {
 // add_filter( 'woocommerce_product_add_to_cart_text', 'woo_archive_custom_cart_button_text' );
 
 // function woo_archive_custom_cart_button_text() {
-	
+
 // 	foreach( WC()->cart->get_cart() as $cart_item_key => $values ) {
 // 		$_product = $values['data'];
-	
+
 // 		if( get_the_ID() == $_product->id ) {
 // 			return __('Already in cart', 'woocommerce');
 // 		}
 // 	}
-	
+
 // 	return __('Add to cart', 'woocommerce');
 // }
