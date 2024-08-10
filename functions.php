@@ -11,7 +11,7 @@ function martfury_child_enqueue_scripts() {
 // always display rating stars
 function filter_woocommerce_product_get_rating_html( $rating_html, $rating ) {
     $rating_html  = '<div class="star-rating">';
-    $rating_html .= wc_get_star_rating_html( $rating );
+    $rating_html .= wc_get_star_rating_html( $rating ).' '.$rating;
     $rating_html .= '</div>';
 
     return $rating_html;
